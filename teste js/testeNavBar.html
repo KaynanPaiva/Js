@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .navbar {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        border-top: 4px solid #007bff;
+        border-bottom: 4px solid #007bff;
+        transition: top 0.3s, box-shadow 0.3s;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+      .navbar a {
+        text-decoration: none;
+        color: #fff;
+        margin: 0 15px;
+      }
+
+      .content {
+        margin-top: 80px; /* Espaço para a barra de navegação */
+        padding: 20px;
+
+        height: 120vh;
+        background-color: beige;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar" id="navbar">
+      <a href="#">Página Inicial</a>
+      <a href="#">Sobre Nós</a>
+      <a href="#">Serviços</a>
+      <a href="#">Contato</a>
+    </div>
+    <div class="content">
+      <!-- Conteúdo da página -->
+    </div>
+    <script>
+      window.onscroll = function () {
+        var navbar = document.getElementById("navbar");
+        if (window.scrollY > 0) {
+          navbar.style.top = "0";
+          navbar.style.boxShadow = "0 5px 15px rgba(0, 0, 0, 0.2)";
+        } else {
+          navbar.style.top = "0";
+          navbar.style.boxShadow = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

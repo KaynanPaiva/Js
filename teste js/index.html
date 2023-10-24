@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+  .slides-container {
+    display: flex;
+    width: 300%;
+    transition: transform 1s ease-in-out;
+  }
+  .slide {
+    flex: 1;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+  }
+  .progress-bar {
+    width: 0;
+    height: 5px;
+    background-color: #007bff;
+    transition: width 1s linear;
+  }
+</style>
+</head>
+<body>
+<div class="slides-container">
+  <div class="slide" style="background-color: #f8d7da;">Slide 1</div>
+  <div class="slide" style="background-color: #d4edda;">Slide 2</div>
+  <div class="slide" style="background-color: #cce5ff;">Slide 3</div>
+</div>
+<div class="progress-bar"></div>
+
+<script>
+const slidesContainer = document.querySelector('.slides-container');
+const progressBar = document.querySelector('.progress-bar');
+const slideCount = 3; // Number of slides
+let currentSlide = 0;
+
+function updateProgressBar() {
+  const progress = (currentSlide / (slideCount - 1)) * 100;
+  progressBar.style.width = `${progress}%`;
+}
+
+function nextSlide() {
+  if (currentSlide < slideCount - 1) {
+    currentSlide++;
+    updateProgressBar();
+    slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+}
+
+// Auto-advance the slides
+setInterval(nextSlide, 3000); // Change slide every 3 seconds
+</script>
+</body>
+</html>

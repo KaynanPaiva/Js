@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <button class="escolherCor" onclick="mostrarContent()">
+      <h1>Escolher cor</h1>
+      <div id="containerContent">
+        <div class="amarelo botaoCor"  onclick="tornarAmarelo()">
+          <h1>Amarelo</h1>
+        </div>
+        <div class="azul botaoCor" onclick="tornarAzul()">
+          <h1>Azul</h1>
+        </div>
+        <div class="branco botaoCor" onclick="tornarBranco()">
+          <h1>Branco</h1>
+        </div>
+      </div>
+    </button>
+    <div class="container">
+      <div class="corPadrao squareColorido" id="square"></div>
+    </div>
+  </body>
+</html>

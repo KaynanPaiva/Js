@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  background-color: rgb(109, 71, 0);
+
+  width: 100%;
+  height: 100vh;
+
+  display: grid;
+  place-items: center;
+}
+
+/* .imagem {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+
+    filter: brightness(50%);
+
+    transform: translate(-50%, -50%);
+
+    z-index: -1;
+} */
+
+.imagem {
+  position: absolute;
+
+  width: 100%;
+  height: 100vh;
+
+  filter: brightness(50%);
+
+  z-index: -1;
+}
+
+.containerRelogio {
+  background-color: rgba(0, 0, 0, 0.6);
+
+  border-radius: 15px;
+
+  width: 200px;
+  height: 50px;
+}
+
+.relogio {
+  background-color: transparent;
+
+  width: 200px;
+  height: 50px;
+
+  display: grid;
+  place-items: center;
+
+  color: rgb(206, 195, 195);
+  font-size: 2em;
+  font-family: "Young Serif", serif;
+}
